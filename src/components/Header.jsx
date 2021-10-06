@@ -2,7 +2,7 @@ import { Box, Center, Heading, Text } from "@chakra-ui/react";
 
 export default function Header() {
   return (
-    <Box marginTop="20" marginBottom="20">
+    <Box marginTop="20" marginBottom="10">
       <Center marginBottom="5">
         <Heading
           as="h2"
