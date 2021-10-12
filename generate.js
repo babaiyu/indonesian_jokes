@@ -17,6 +17,7 @@ async function getUser(username, data) {
         jokes: item.jokes,
         avatar: resData.avatar_url,
         name: resData.name,
+        username,
       };
 
       arr.push(payload);
