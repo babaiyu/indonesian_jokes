@@ -1,7 +1,8 @@
 import { Container, Divider } from "@chakra-ui/react";
 import List from "./List";
+import jokes from "../assets/jokes.json";
 
-const data = [1, 2, 3, 4, 5, 6];
+const data = jokes.data;
 
 export default function Home() {
   return (
