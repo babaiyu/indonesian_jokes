@@ -1,6 +1,5 @@
 import { Center, Wrap } from "@chakra-ui/react";
 import ListItem from "./ListItem";
-import '../App.css';
 
 export default function List(props) {
   const { data } = props;

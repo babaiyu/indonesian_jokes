@@ -1,5 +1,4 @@
 import { Box, Center, Heading, Text } from "@chakra-ui/react";
-import '../App.css';
 
 export default function Header() {
   return (

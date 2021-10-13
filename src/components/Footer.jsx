@@ -1,5 +1,4 @@
 import { Stack, Divider, Center, Text } from "@chakra-ui/react";
-import '../App.css';
 
 export default function Footer() {
   return (
