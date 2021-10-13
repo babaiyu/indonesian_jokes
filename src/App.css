@@ -40,3 +40,42 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.chakra-container, .css-10krord {
+  width: 100% !important;
+}
+
+.chakra-ui-light, .root {
+  width: 100vw;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden !important;
+
+}
+
+.chakra-wrap__list {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.css-1i1feez {
+  text-align: center;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 985px) {
+  .css-1i1feez {
+    padding: 0em 2em;
+  }
+
+  .chakra-wrap__list  {
+    width: 90vw;
+  }
+  .chakra-wrap__listitem {
+    width: 95%;
+  }
+}

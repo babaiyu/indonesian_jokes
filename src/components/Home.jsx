@@ -1,6 +1,7 @@
 import { Container, Divider } from "@chakra-ui/react";
 import List from "./List";
 import jokes from "../assets/jokes.json";
+import '../App.css';
 
 const data = jokes.data;
 
