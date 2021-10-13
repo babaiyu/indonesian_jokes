@@ -14,7 +14,7 @@ npm run dev
 ## CONTRIBUTES
 1. Fork repository ini
 2. Clone repository yang telah ter-fork
-3. Tambahkan file username.json lalu ikuti structure json seperti di bawah:
+3. Tambahkan file username.json di src/data lalu ikuti structure json seperti di bawah:
 ```
 {
   "data": [
