@@ -1,4 +1,5 @@
 import { Box, WrapItem, Avatar } from "@chakra-ui/react";
+import theme from "../theme";
 
 export default function ListItem({ item }) {
   // Navigate to github profile
@@ -16,6 +17,15 @@ export default function ListItem({ item }) {
     link.dispatchEvent(event);
   };
 
+  const randomColor = () => {
+    const skipColors = ['white', 'black', 'current', 'currentColor', 'transparent'];
+    const colors = Object
+      .keys(theme.colors)
+      .filter(color => !skipColors.includes(color))
+      .map(color => color);
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
   return (
     <WrapItem>
       <Box
@@ -23,7 +33,7 @@ export default function ListItem({ item }) {
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
-        bgGradient="linear(to-r, green.200, pink.500)"
+        bgGradient={`linear(to-r, ${randomColor()}.200, ${randomColor()}.500)`}
         p="2.5"
       >
         <Box fontWeight="semibold" as="h4" lineHeight="tight">
