@@ -12,6 +12,6 @@ npm run dev
 ```
 
 ## CONTRIBUTES
-Untuk ikut berkontribusi, ikuti langkah-langkah yang mengacu ke [CONTRIBUTIONS.md](./CONTRIBUTIONS.md)
+Untuk ikut berkontribusi, ikuti langkah-langkah yang mengacu ke [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 _#happy_hacktoberfest_
