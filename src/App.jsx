@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChakraProvider, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
