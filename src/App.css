@@ -1,81 +1,95 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.iconStyle {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: linear-gradient(326deg, #648da3 0%, #d7816a 74%);
+    inset: 15px 30px auto auto;
+    padding: 5px;
+    border-radius: 18px;
+}
+.iconStyle:hover {
+    padding: 0.2%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 button {
-  font-size: calc(10px + 2vmin);
+    font-size: calc(10px + 2vmin);
 }
 
 .chakra-container, .css-10krord {
-  width: 100% !important;
+    width: 100% !important;
 }
 
 .chakra-ui-light, .root {
-  width: 100vw;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden !important;
+    width: 100vw;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden !important;
 
 }
 
 .chakra-wrap__list {
-  display: flex !important;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
 }
 
 .css-1i1feez {
-  text-align: center;
+    text-align: center;
 }
 
 /*MEDIA QUERIES*/
 
 @media (max-width: 985px) {
-  .css-1i1feez {
-    padding: 0em 2em;
-  }
+    .css-1i1feez {
+        padding: 0em 2em;
+    }
 
-  .chakra-wrap__list  {
-    width: 90vw;
-  }
-  .chakra-wrap__listitem {
-    width: 95%;
-  }
+    .chakra-wrap__list {
+        width: 90vw;
+    }
+
+    .chakra-wrap__listitem {
+        width: 95%;
+    }
 }
