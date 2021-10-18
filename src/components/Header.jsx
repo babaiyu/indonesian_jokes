@@ -1,11 +1,16 @@
 import {Box, Center, Heading, Text, Button} from "@chakra-ui/react";
+import darkicon from "../assets/darkicon.png"
 
 export default function Header(props) {
 
     return (
         <Box marginTop="20" marginBottom="10">
             <Center marginBottom="5">
-                <a className="message" href="https://github.com/babaiyu/indonesian_jokes">forked me </a>
+                <a href="https://github.com/babaiyu/indonesian_jokes"
+                   target="_blank">
+                    <img className="iconStyle" src={darkicon} alt="github-logo"/>
+                </a>
+                {/*<a className="message" href="https://github.com/babaiyu/indonesian_jokes">forked me </a>*/}
                 <Heading
                     as="h2"
                     size="2xl"
