@@ -3,5 +3,6 @@ node_modules
 dist
 dist-ssr
 *.local
+.idea
 src/assets/*.json
 package-lock.json
