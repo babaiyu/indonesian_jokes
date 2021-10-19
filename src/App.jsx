@@ -9,7 +9,12 @@ import './App.css';
 
 export default function App() {
 
-  const [isLightMode, setIsLightMode] = useState(true);
+  const [isLightMode, setIsLightMode] = useState(
+    !(
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    )
+  );
 
   return (
     <ChakraProvider theme={isLightMode ? lightTheme : darkTheme} >
