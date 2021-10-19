@@ -1,4 +1,4 @@
-import {Box, Center, Heading, Text, Button} from "@chakra-ui/react";
+import {Box, Center, Heading, Text, Button, Tooltip} from "@chakra-ui/react";
 import darkicon from "../assets/darkicon.png"
 
 export default function Header(props) {
@@ -6,9 +6,10 @@ export default function Header(props) {
     return (
         <Box marginTop="20" marginBottom="10">
             <Center marginBottom="5">
-                <a href="https://github.com/babaiyu/indonesian_jokes"
-                   target="_blank">
-                    <img className="iconStyle" src={darkicon} alt="github-logo"/>
+                <a href="https://github.com/babaiyu/indonesian_jokes" target="_blank">
+                    <Tooltip hasArrow label="Fork me!" bg="gray.300" color="black" placement="right-start">
+                        <img className="iconStyle" src={darkicon} alt="github-logo"/>
+                    </Tooltip>
                 </a>
                 {/*<a className="message" href="https://github.com/babaiyu/indonesian_jokes">forked me </a>*/}
                 <Heading
