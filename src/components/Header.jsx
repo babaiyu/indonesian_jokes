@@ -33,7 +33,7 @@ export default function Header(props) {
                 </Box>
             </Center>
             <Center>
-                <Text textAlign="center" color="gray.600">
+                <Text textAlign="center">
                     Kumpulan jokes lucu yang tersedia dalam bahasa Indonesia. Project ini
                     dibuat untuk memeriahkan #hacktoberfest2021
                 </Text>
