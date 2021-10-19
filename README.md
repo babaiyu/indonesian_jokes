@@ -6,7 +6,7 @@ Project ini dibuat untuk memeriahkan hacktoberfest2021
 ```
 git clone https://github.com/babaiyu/indonesian_jokes.git
 cd indonesian_jokes
-npm run install
+npm install
 npm run generate
 npm run dev
 ```
