@@ -15,3 +15,6 @@ npm run dev
 Untuk ikut berkontribusi, ikuti langkah-langkah yang mengacu ke [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 _#happy_hacktoberfest_
+
+## CONTRIBUTORS
+![](https://contrib.rocks/image?repo=babaiyu/indonesian_jokes)
