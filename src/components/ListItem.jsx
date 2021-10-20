@@ -17,20 +17,6 @@ export default function ListItem({ item }) {
     link.dispatchEvent(event);
   };
 
-  const randomColor = () => {
-    const skipColors = [
-      "white",
-      "black",
-      "current",
-      "currentColor",
-      "transparent",
-    ];
-    const colors = Object.keys(theme.colors)
-      .filter((color) => !skipColors.includes(color))
-      .map((color) => color);
-    return colors[Math.floor(Math.random() * colors.length)];
-  };
-
   return (
     <WrapItem>
       <Box
@@ -38,9 +24,10 @@ export default function ListItem({ item }) {
         borderWidth="thick"
         borderRadius="lg"
         overflow="hidden"
-        bgGradient={`linear(to-r, ${randomColor()}.200, ${randomColor()}.500)`}
         p="2.5"
-        borderColor="telegram.400"
+        borderColor={`rgb(${Math.floor(Math.random() * 256)},${
+          100 + Math.floor(Math.random() * 256)
+        },${50 + Math.floor(Math.random() * 256)})`}
         maxWidth="sm"
       >
         <Box fontWeight="semibold" as="h4" fontSize="larger" lineHeight="tight" mb="5">
