@@ -6,7 +6,7 @@ const data = jokes.data;
 
 export default function Home() {
   return (
-    <Container maxW="container.lg" centerContent>
+    <Container maxW="container.xl" centerContent>
       <Divider orientation="horizontal" colorScheme="blue" marginBottom="10" />
       <List data={data} />
     </Container>

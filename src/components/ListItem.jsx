@@ -18,25 +18,32 @@ export default function ListItem({ item }) {
   };
 
   const randomColor = () => {
-    const skipColors = ['white', 'black', 'current', 'currentColor', 'transparent'];
-    const colors = Object
-      .keys(theme.colors)
-      .filter(color => !skipColors.includes(color))
-      .map(color => color);
+    const skipColors = [
+      "white",
+      "black",
+      "current",
+      "currentColor",
+      "transparent",
+    ];
+    const colors = Object.keys(theme.colors)
+      .filter((color) => !skipColors.includes(color))
+      .map((color) => color);
     return colors[Math.floor(Math.random() * colors.length)];
-  }
+  };
 
   return (
     <WrapItem>
       <Box
         width="max-content"
-        borderWidth="1px"
+        borderWidth="thick"
         borderRadius="lg"
         overflow="hidden"
         bgGradient={`linear(to-r, ${randomColor()}.200, ${randomColor()}.500)`}
         p="2.5"
+        borderColor="telegram.400"
+        maxWidth="sm"
       >
-        <Box fontWeight="semibold" as="h4" lineHeight="tight">
+        <Box fontWeight="semibold" as="h4" fontSize="larger" lineHeight="tight" mb="5">
           "{item.jokes}"
         </Box>
         <Box
