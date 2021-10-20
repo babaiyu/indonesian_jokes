@@ -1,4 +1,4 @@
-import {Box, Center, Heading, Text, Button, Tooltip} from "@chakra-ui/react";
+import {Box, Center, Heading, Text, Tooltip} from "@chakra-ui/react";
 import darkicon from "../assets/darkicon.png"
 
 export default function Header(props) {
@@ -11,7 +11,6 @@ export default function Header(props) {
                         <img className="iconStyle" src={darkicon} alt="github-logo"/>
                     </Tooltip>
                 </a>
-                {/*<a className="message" href="https://github.com/babaiyu/indonesian_jokes">forked me </a>*/}
                 <Heading
                     as="h2"
                     size="2xl"
