@@ -59,6 +59,7 @@ export default function ListItem({ item }) {
             src={item?.avatar || ""}
             size="xs"
             mr="1"
+            loading="lazy"
           />
           {item.name}
         </Box>
