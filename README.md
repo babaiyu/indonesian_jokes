@@ -2,6 +2,10 @@
 Kumpulan Jokes berbahasa Indonesia
 Project ini dibuat untuk memeriahkan hacktoberfest2021
 
+![](https://img.shields.io/github/issues/babaiyu/indonesian_jokes)
+![](https://img.shields.io/github/issues-pr/babaiyu/indonesian_jokes)
+![](https://img.shields.io/github/contributors/babaiyu/indonesian_jokes)
+
 ## Cara running di local
 ```
 git clone https://github.com/babaiyu/indonesian_jokes.git
