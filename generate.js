@@ -5,34 +5,47 @@ const axios = require("axios").default;
 const baseUrl = "https://api.github.com/users";
 let arr = [];
 
+// Randomize list
+function randomizeList(array) {
+  let currentIndex = array.length,
+    randomIndex;
+
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+}
+
 // Get github profile by username
 async function getUser(username, data) {
-  try {
-    const response = await axios.get(`${baseUrl}/${username}`);
-    const resData = response.data || { avatar: "", name: "" };
+  const response = await axios.get(`${baseUrl}/${username}`);
+  const resData = response?.data || { avatar: "", name: "" };
 
-    data.map((item) => {
-      const payload = {
-        id: +new Date(),
-        jokes: item.jokes,
-        avatar: resData.avatar_url,
-        name: resData.name,
-        username,
-      };
+  data.map((item) => {
+    const payload = {
+      id: +new Date(),
+      jokes: item.jokes,
+      avatar: resData?.avatar_url || "",
+      name: resData?.name || "Username not found!",
+      username,
+    };
 
-      arr.push(payload);
-    });
+    arr.push(payload);
+  });
 
-    fs.writeFileSync(
-      "./src/assets/jokes.json",
-      JSON.stringify({ data: arr }, null, 4)
-    );
+  arr = randomizeList(arr);
 
-    console.table(arr);
-    console.log("Generate jokes is complete!");
-  } catch (err) {
-    console.error(err);
-  }
+  fs.writeFileSync(
+    "./src/assets/jokes.json",
+    JSON.stringify({ data: arr }, null, 4)
+  );
 }
 
 // Get json file
