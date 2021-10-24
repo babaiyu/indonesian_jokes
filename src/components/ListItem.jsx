@@ -29,8 +29,20 @@ export default function ListItem({ item }) {
           100 + Math.floor(Math.random() * 256)
         },${50 + Math.floor(Math.random() * 256)})`}
         maxWidth="sm"
+        maxHeight="sm"
+        minHeight="52"
+        marginTop="10"
+        display="flex"
+        flexDirection="column"
+        justifyContent="space-between"
       >
-        <Box fontWeight="semibold" as="h4" fontSize="larger" lineHeight="tight" mb="5">
+        <Box
+          fontWeight="semibold"
+          as="h4"
+          fontSize="larger"
+          lineHeight="tight"
+          mb="5"
+        >
           "{item.jokes}"
         </Box>
         <Box
@@ -45,7 +57,7 @@ export default function ListItem({ item }) {
             name={item?.name || ""}
             src={item?.avatar || ""}
             size="xs"
-            mr="1"
+            mr="3"
             loading="lazy"
           />
           {item.name}
