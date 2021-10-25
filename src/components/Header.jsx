@@ -1,4 +1,4 @@
-import {Box, Center, Heading, Text, Tooltip} from "@chakra-ui/react";
+import {Box, Center, Heading, Text, Tooltip, Image} from "@chakra-ui/react";
 import darkicon from "../assets/darkicon.png"
 
 export default function Header(props) {
@@ -37,6 +37,23 @@ export default function Header(props) {
                     Kumpulan jokes lucu yang tersedia dalam bahasa Indonesia. Project ini
                     dibuat untuk memeriahkan #hacktoberfest2021
                 </Text>
+            </Center>
+            <Center my={4}>
+                <Box mx={2}>
+                    <a href="https://github.com/babaiyu/indonesian_jokes/issues" target="_blank">
+                        <Image src="https://img.shields.io/github/issues/babaiyu/indonesian_jokes" alt="issue-count" />
+                    </a>
+                </Box>
+                <Box mx={2}>
+                    <a href="https://github.com/babaiyu/indonesian_jokes/pulls" target="_blank">
+                        <Image src="https://img.shields.io/github/issues-pr/babaiyu/indonesian_jokes" alt="pull-request-count" />
+                    </a>
+                </Box>
+                <Box mx={2}>
+                    <a href="https://github.com/babaiyu/indonesian_jokes/graphs/contributors" target="_blank">
+                        <Image src="https://img.shields.io/github/contributors/babaiyu/indonesian_jokes" alt="contributor-count" />
+                    </a>
+                </Box>
             </Center>
         </Box>
     );
