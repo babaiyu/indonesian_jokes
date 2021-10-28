@@ -32,7 +32,7 @@ async function getUser(username, data) {
     const payload = {
       id: +new Date(),
       jokes: item.jokes,
-      avatar: resData?.avatar_url || "",
+      avatar: `${resData?.avatar_url}&s=100` || "",
       name: resData?.name || "Username not found!",
       username,
     };
