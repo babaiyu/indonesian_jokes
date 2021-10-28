@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import {lightTheme, darkTheme} from "./theme";
-import './App.css';
+import { lightTheme, darkTheme } from "./theme";
+import "./App.css";
+import LazyLoad from "./helpers/LazyLoad";
 
+const Header = lazy(() => import("./components/Header"));
+const Home = lazy(() => import("./components/Home"));
+const Footer = lazy(() => import("./components/Footer"));
 
 export default function App() {
-
   // initial colorscheme detection
   const [isLightMode, setIsLightMode] = useState(
     !(
@@ -25,10 +25,17 @@ export default function App() {
     });
 
   return (
-    <ChakraProvider theme={isLightMode ? lightTheme : darkTheme} >
-      <Header isLightMode={isLightMode} toggleTheme={() => setIsLightMode(!isLightMode)}/>
-      <Home />
-      <Footer />
+    <ChakraProvider theme={isLightMode ? lightTheme : darkTheme}>
+      <LazyLoad
+        children={
+          <Header
+            isLightMode={isLightMode}
+            toggleTheme={() => setIsLightMode(!isLightMode)}
+          />
+        }
+      />
+      <LazyLoad children={<Home />} />
+      <LazyLoad children={<Footer />} />
     </ChakraProvider>
   );
 }
