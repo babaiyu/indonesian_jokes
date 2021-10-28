@@ -1,5 +1,4 @@
 import { Box, WrapItem, Avatar } from "@chakra-ui/react";
-import theme from "../theme";
 
 export default function ListItem({ item }) {
   // Navigate to github profile
