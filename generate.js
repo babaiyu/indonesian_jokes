@@ -1,6 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios").default;
+const dotenv = require('dotenv');
+
+// Get local .env
+dotenv.config();
+
+const { GITHUB_TOKEN } = process.env;
 
 const baseUrl = "https://api.github.com/users";
 let arr = [];
@@ -24,28 +30,46 @@ function randomizeList(array) {
 }
 
 // Get github profile by username
-async function getUser(username, data) {
-  const response = await axios.get(`${baseUrl}/${username}`);
-  const resData = response?.data || { avatar: "", name: "" };
+async function getUserV2(username, data) {
+  try {
+    const response = await axios.get(`${baseUrl}/${username}`, {
+      headers: {
+        Accept: "application/vnd.github+json",
+        Authorization: `Bearer ${GITHUB_TOKEN}`
+      }
+    });
 
-  data.map((item) => {
-    const payload = {
-      id: +new Date(),
-      jokes: item.jokes,
-      avatar: `${resData?.avatar_url}&s=100` || "",
-      name: resData?.name || "Username not found!",
+    const resData = response?.data || { avatar: "", name: "" };
+
+    data.forEach((item) => {
+      const payload = {
+        id: +new Date(),
+        jokes: item.jokes,
+        avatar: `${resData?.avatar_url}&s=100` || "",
+        name: resData?.name || "Username not found!",
+        username,
+      };
+
+      arr.push(payload);
+    });
+
+    arr = randomizeList(arr);
+
+    fs.writeFileSync(
+      "./src/assets/jokes.json",
+      JSON.stringify({ data: arr }, null, 4)
+    );
+
+    console.info('Success get user of ', username);
+  } catch (error) {
+    const errorResult = error?.response?.data ?? error;
+    const result = {
       username,
+      error: errorResult?.message,
     };
 
-    arr.push(payload);
-  });
-
-  arr = randomizeList(arr);
-
-  fs.writeFileSync(
-    "./src/assets/jokes.json",
-    JSON.stringify({ data: arr }, null, 4)
-  );
+    console.table(result);
+  }
 }
 
 // Get json file
@@ -58,5 +82,5 @@ jsonsInDir.forEach((file) => {
   const fileData = fs.readFileSync(path.join("./src/data", file));
   const jsonParsed = JSON.parse(fileData.toString());
 
-  getUser(jsonParsed.author, jsonParsed.data);
+  getUserV2(jsonParsed.author, jsonParsed.data);
 });
