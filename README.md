@@ -1,6 +1,6 @@
 # indonesian_jokes
 Kumpulan Jokes berbahasa Indonesia
-Project ini dibuat untuk memeriahkan hacktoberfest2021
+Project ini dibuat untuk memeriahkan hacktoberfest2022
 
 ![](https://img.shields.io/github/issues/babaiyu/indonesian_jokes)
 ![](https://img.shields.io/github/issues-pr/babaiyu/indonesian_jokes)
