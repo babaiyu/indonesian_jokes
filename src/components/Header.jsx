@@ -35,7 +35,7 @@ export default function Header(props) {
             <Center>
                 <Text textAlign="center">
                     Kumpulan jokes lucu yang tersedia dalam bahasa Indonesia. Project ini
-                    dibuat untuk memeriahkan #hacktoberfest2021
+                    dibuat untuk memeriahkan #hacktoberfest2022
                 </Text>
             </Center>
             <Center my={4}>
