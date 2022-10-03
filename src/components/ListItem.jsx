@@ -1,4 +1,4 @@
-import { Box, WrapItem, Avatar } from "@chakra-ui/react";
+import { Box, WrapItem, Avatar, Text, Flex } from "@chakra-ui/react";
 
 export default function ListItem({ item }) {
   // Navigate to github profile
@@ -44,10 +44,9 @@ export default function ListItem({ item }) {
         >
           "{item.jokes}"
         </Box>
-        <Box
+        <Flex
           as="span"
           mt="2"
-          color="gray.600"
           fontSize="sm"
           onClick={onNavigate}
           style={{ cursor: "pointer" }}
@@ -59,8 +58,15 @@ export default function ListItem({ item }) {
             mr="3"
             loading="lazy"
           />
-          {item.name}
-        </Box>
+          <Text 
+            fontSize="sm" 
+            _hover={{
+              fontWeight: 'bold'
+            }}
+          >
+            {item.name}
+          </Text>
+        </Flex>
       </Box>
     </WrapItem>
   );
