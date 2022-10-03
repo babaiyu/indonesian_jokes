@@ -1,12 +1,15 @@
 # Cara berpartisipasi dalam repository ini
 1. Fork repository ini
 2. Clone repository yang telah ter-fork
-3. Tambahkan file username.json lalu ikuti structure json seperti di bawah:
-```
+3. Tambahkan file username_mu.json ke dalam direktori `indonesian_jokes/src/data/` lalu ikuti structure json seperti di bawah:
+```json
 {
   "data": [
     {
       "jokes": "Sejak kapan Rengoku hidup di season 2?"
+    },
+    {
+      "jokes": "Kenapa cewek suka bingung cari tempat makan 💁‍♀️? Karena di awal kasih saran makan apa, seluruh umat manusia dilempar ke bumi 🤦‍♂️."
     }
   ],
   "author": "babaiyu"
