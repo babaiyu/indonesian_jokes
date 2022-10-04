@@ -31,7 +31,7 @@ Disini kita akan menginstall versi __Linux Node version managers__, selain itu d
     ```
     akan menghasilkan `nvm` jika berhasil.
     
-    __Catatan__: Pada Linux, jika setelah menjalankan script diatas, kita mendapatkan `nvm: command not found` atau melihat tidak ada umpan balik dari terminal setelah mengetik `command -v nvm`, tutup terminal saat ini dan bukan terminal baru dan verifikasi ulang.
+    __Catatan__: Pada Linux, jika setelah menjalankan script diatas, kita mendapatkan `nvm: command not found` atau melihat tidak ada umpan balik dari terminal setelah mengetik `command -v nvm`, tutup terminal saat ini dan buka terminal baru dan verifikasi ulang.
 1. Download, compile dan instal rilis terbaru dari node
     ```sh
     nvm install node # "node" is an alias for the latest version
@@ -45,7 +45,7 @@ Disini kita akan menginstall versi __Linux Node version managers__, selain itu d
 
 ### Clone repository
 
-1. Pada terminal atau WSL yang sama jalankan
+- Pada terminal atau WSL yang sama jalankan
     ```sh
     git clone https://github.com/babaiyu/indonesian_jokes.git
     cd indonesian_jokes
@@ -55,44 +55,46 @@ Disini kita akan menginstall versi __Linux Node version managers__, selain itu d
 
 Sehubungan update kebijakan dari github, yakni rest api harus menggunakan `github token`. Maka dari itu anda perlu membuat token dengan mengikuti langkah berikut ini:
 
-- Buka `Personal access tokens` dengan klik tautan ini. [Personal access tokens](https://github.com/settings/tokens) lalu klik button `Generate new token`.
+1. Buka `Personal access tokens` dengan klik tautan ini. [Personal access tokens](https://github.com/settings/tokens) lalu klik button `Generate new token`.
 
     <img src="assets/img_settings_pat.png" alt="Settings -> Developer Settings -> Personal access token" />
 
-- Untuk bagian `Note`, isi dengan
+1. Untuk bagian `Note`, isi dengan
     ```
     indonesian_jokes
     ```
 
-- Untuk bagian `Select scopes`, cukup centang `user`. Setelah itu anda `Generate token`.
+1. Untuk bagian `Select scopes`, cukup centang `user`. Setelah itu anda `Generate token`.
 
     <img src="assets/img_settings_pat_scopes.png" alt="Select scopes" />
 
-- Copy token yang sudah anda buat [__Ingat! Ini hanya sekali dan cepat kadaluarsa__]
-- Buat file baru `.env` pada terminal
+1. Copy token yang sudah anda buat [__Ingat! Ini hanya sekali dan cepat kadaluarsa__]
+1. Buat file baru `.env` pada terminal
     ```sh
     touch .env
     ```
-- Terakhir, pada file `.env` masukkan variabel `GITHUB_TOKEN` dengan token yang telah anda copy.
+1. Terakhir, pada file `.env` masukkan variabel `GITHUB_TOKEN` dengan token yang telah anda copy.
     ```sh
     GITHUB_TOKEN = <ganti_dengan_token_yang_dicopy_tanpa_kurung_atau_tanda_petik>
     ```
 
 > Referensi: [Getting started using cURL](https://docs.github.com/en/rest/quickstart#getting-started-using-curl)
 
+### Running web app
 
 > Note: Pastikan anda sudah mengikuti panduan [GitHub Token](#github-token) sebelum lanjut ke langkah selanjutnya.
 
-```
-npm install
-npm run generate
-npm run dev
-```
+- Pada terminal atau WSL yang sama jalankan
+    ```sh
+    npm install
+    npm run generate
+    npm run dev
+    ```
 
-## CONTRIBUTES
-Untuk ikut berkontribusi, ikuti langkah-langkah yang mengacu ke [CONTRIBUTING.md](./CONTRIBUTING.md)
+## CONTRIBUTE
+Untuk ikut berkontribusi atau menyumbang jokes, ikuti langkah-langkah yang mengacu ke [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-_#happy_hacktoberfest_
+__#happy_hacktoberfest__
 
 ## CONTRIBUTORS
 ![](https://contrib.rocks/image?repo=babaiyu/indonesian_jokes)
