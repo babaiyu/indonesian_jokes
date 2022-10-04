@@ -7,12 +7,15 @@
     pointer-events: none;
 }
 
-.iconStyle {
+.top-right-links {
     position: absolute;
+    inset: 15px 30px auto auto;
+}
+
+.iconStyle {
     height: 50px;
     width: 50px;
     background-image: linear-gradient(326deg, #648da3 0%, #d7816a 74%);
-    inset: 15px 30px auto auto;
     padding: 5px;
     border-radius: 18px;
 }
