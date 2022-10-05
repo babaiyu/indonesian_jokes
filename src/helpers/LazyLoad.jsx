@@ -7,6 +7,6 @@ export default function LazyLoad({ children }) {
 
 const ButtonLoading = () => (
   <Center>
-    <Button isLoading colorScheme="blue" variant="solid" />˝
+    <Button isLoading colorScheme="blue" variant="solid" />
   </Center>
 );
