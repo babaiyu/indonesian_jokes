@@ -19,8 +19,8 @@ export default function App() {
           <Header isLightMode={isLightMode} toggleTheme={onChangeTheme} />
         }
       />
-      <LazyLoad children={<Home />} />
-      <LazyLoad children={<Footer />} />
+      <LazyLoad children={<Home isLightMode={isLightMode} />} />
+      <LazyLoad children={<Footer isLightMode={isLightMode} />} />
     </ChakraProvider>
   );
 }
