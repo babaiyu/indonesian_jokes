@@ -7,6 +7,9 @@ export default function Footer(props) {
     <Stack marginTop="20" marginBottom="10">
       <Divider borderColor={props.isLightMode ? "black" : "white"} />
       <Center>
+        <Text fontSize="sm">Made with ❤️ with our community</Text>
+      </Center>
+      <Center>
         <Text fontSize="sm">Copyright &copy; {year}</Text>
       </Center>
     </Stack>
