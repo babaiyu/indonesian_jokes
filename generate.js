@@ -46,7 +46,7 @@ async function getUserV2(username, data) {
         id: +new Date(),
         jokes: item.jokes,
         avatar: `${resData?.avatar_url}&s=100` || "",
-        name: resData?.name || "Username not found!",
+        name: resData?.name || resData?.login,
         username,
       };
 

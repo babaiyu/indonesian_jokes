@@ -56,12 +56,12 @@ export default function ListItem({ item }) {
             src={item?.avatar || ""}
             size="xs"
             mr="3"
-            loading="lazy"
+            loading="eager"
           />
-          <Text 
-            fontSize="sm" 
+          <Text
+            fontSize="sm"
             _hover={{
-              fontWeight: 'bold'
+              fontWeight: "bold",
             }}
           >
             {item.name}
