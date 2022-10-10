@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: indonesian_jokes_container
+    build: ./
+    ports:
+      - 4173:4173

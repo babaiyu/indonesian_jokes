@@ -1,0 +1,4 @@
+# Ignore this files for faster docker build
+node_modules
+Dockerfile
+.git
